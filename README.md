@@ -1,86 +1,46 @@
+# DBMS Laboratory Manual Submission
 
-# Experiment 1: Entity-Relationship (ER) Diagram
+## 🎓 Course: 19CS404 Database Management System and its Applications  
+## 🧑‍🏫 Instructor: Ms. G Abinaya 
 
-## 🎯 Objective:
-To understand and apply the concepts of ER modeling by creating an ER diagram for a real-world application.
+![image](https://github.com/user-attachments/assets/7e6f9751-b530-4526-9a3d-8e322e3b2e6d)
 
-## 📚 Purpose:
-The purpose of this workshop is to gain hands-on experience in designing ER diagrams that visually represent the structure of a database including entities, relationships, attributes, and constraints.
+### 📝 Instructions for Students
 
----
+1. Fork this repository to your GitHub profile.
+2. For each experiment:
+   SQL queries based on questions generated randomly from Moodle.
+   - Complete the question on Moodle.
+   - Each experiment folder contains **two Markdown files**
+     1. `README.md`
 
-## 🧪 Choose One Scenario:
+        This file contains:
+         - 🎯 **Aim**
+         - 📚 **Theory**
+         - 📝 **Result**
+        
+        You **do not need to edit** this file unless instructed.
+      3. `output.md`
 
-### 🔹 Scenario 1: University Database
-Design a database to manage students, instructors, programs, courses, and student enrollments. Include prerequisites for courses.
+         You **must update this file** with your answers and outputs.
+         For each of the 10 Moodle-generated questions:
+         - Paste the **question**
+         - Write the **SQL query** inside the code block
+         - Paste a **screenshot or terminal output** below it
+3. Commit and push your changes.
+4. Create a pull request to the original repository
 
-**User Requirements:**
-- Academic programs grouped under departments.
-- Students have admission number, name, DOB, contact info.
-- Instructors with staff number, contact info, etc.
-- Courses have number, name, credits.
-- Track course enrollments by students and enrollment date.
-- Add support for prerequisites (some courses require others).
+### ✅ Experiments List
 
----
-
-### 🔹 Scenario 2: Hospital Database
-Design a database for patient management, appointments, medical records, and billing.
-
-**User Requirements:**
-- Patient details including contact and insurance.
-- Doctors and their departments, contact info, specialization.
-- Appointments with reason, time, patient-doctor link.
-- Medical records with treatments, diagnosis, test results.
-- Billing and payment details for each appointment.
-
----
-
-## 📝 Tasks:
-1. Identify entities, relationships, and attributes.
-2. Draw the ER diagram using any tool (draw.io, dbdiagram.io, hand-drawn and scanned).
-3. Include:
-   - Cardinality & participation constraints
-   - Prerequisites for University OR Billing for Hospital
-4. Explain:
-   - Why you chose the entities and relationships.
-   - How you modeled prerequisites or billing.
-
-# ER Diagram Submission
-
-## Scenario Chosen:
-University 
-
-## ER Diagram:
-![Screenshot 2025-05-06 112346](https://github.com/user-attachments/assets/44d8dc7c-7a8e-4ad1-92c0-79c5df26bc14)
-
-
-
-## Entities and Attributes:
-Student-(Register No, Name, dob, EmailId, Mobile No)
-
-Department -(department name, hod)
-
-Course-(course name, course no, no. of credits)
-
-Faculty- (Staff Id, mobile no, name, email)
-
-Prerequisite Courses- (course name, credits)
-
-
-## Relationships and Constraints:
-- Belongs to (Student, Department)
-- Enrolls in (Student, Course)
-- Offers (Department, Course)
-- Handled by (Course, Faculty)
-- Has prerequisites (Course, Prerequisite Courses)
-- Belongs to (Faculty, Department)
-
-## Extension (Prerequisite / Billing):
-- The ER diagram models prerequisites using the has prerequisites relationship connecting Course to the Prerequisite Courses entity. This separate entity stores details like course name and credits for each prerequisite. This design allows a course to have multiple prerequisites, each with specific attributes, avoiding multi-valued attributes in the Course entity. The implied Many-to-Many relationship signifies that one course can have several prerequisites, and a course can be a prerequisite for many others. This approach ensures a flexible and normalized representation of prerequisite dependencies within the database.
-
-## Design Choices:
-The entities in this ER diagram—Student, Department, Course, and Faculty—were chosen as they represent the core organizational units and actors within a typical academic institution. Students are the primary subjects of study, Departments are the administrative and academic groupings, Courses are the units of instruction, and Faculty are the educators and researchers. The relationships model the natural interactions between these entities: students belong to departments and enroll in courses; departments offer courses and faculty belong to and handle them; and courses have prerequisites. The inclusion of "Prerequisite Courses" as a separate entity, linked by the "has prerequisites" relationship, addresses the need to capture potentially multiple and attribute-rich prerequisite information for each course without complicating the main "Course" entity. Key assumptions include that every student and faculty member is associated with one department (total participation), and that the curriculum is structured around courses offered by departments and potentially requiring other courses as prerequisites. The Many-to-Many cardinalities for "enrolls in" and "handled by" reflect the reality that students take multiple courses and faculty teach multiple courses.
-
-## RESULT
-Thus the ER diagram for the university database is successfully developed.
+| Exp No | Title                          | Module Based? |
+|--------|--------------------------------|---------------|
+| 1      | ER Diagram                     | No            |
+| 2      | DDL Commands                   | Yes           |
+| 3      | DML Commands                   | Yes           |
+| 4      | Aggregate, GROUP BY, HAVING   | Yes           |
+| 5      | Subqueries and Views          | Yes           |
+| 6      | Joins                         | Yes           |
+| 7      | Pl/sql                        | No            |
+| 8      | Procedures, Functions         | No            |
+| 9      | Cursors, Exception Handling   | No            |
+| 10     | Triggers                      | No            |
