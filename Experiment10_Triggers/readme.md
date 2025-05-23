@@ -210,8 +210,6 @@ VALUES (2, 'Jane Smith', 4000);
 
 ![image](https://github.com/user-attachments/assets/5545c56f-851d-4bd5-bf0f-750a86fc8b34)
 
-## RESULT
-Thus, the PL/SQL trigger programs were written and executed successfully.
 
 
 ## RESULT
